@@ -6,26 +6,30 @@ public class App {
 		
 		String str;  // String
 		char ch; // Character
-		
+
 		try 
 		{		
 			str = "Irgend eine Zeichenkette";
-			System.out.println("Stringlaenge :" + str.length());
+			ausgabe("Stringlaenge: " + str.length());
 			
 			ch = str.charAt(200);
-			System.out.println("Character :" + ch);	
+			ausgabe("Character: " + ch);	
 		} 
 		catch (StringIndexOutOfBoundsException e) 
 		{
 			// Fehlerbehandlung ...
-			System.out.println("Index Fehler, bitte Eingabe pruefen!");		
+			ausgabe("Index Fehler, bitte Eingabe pruefen!");		
 		}
 		catch (Exception e) 
 		{
 			// Weitere Fehler-Routinen ....
 		}
 		
-		
 	}
+
+	private static void ausgabe(String outStr) {
+        System.out.println(outStr);
+    }
+	
 
 }
